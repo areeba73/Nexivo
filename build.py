@@ -55,7 +55,7 @@ def header(active):
     links = "".join(f'<a href="{{R}}{h}" class="{"on" if h == active else ""}">{t}</a>' for t, h in NAV)
     mlinks = "".join(f'<a href="{{R}}{h}">{t}</a>' for t, h in NAV) + '<a href="{R}contact-us.html">Contact Us</a>'
     return f'''<header class="nav"><div class="nav-in">
-<a class="logo" href="{{R}}index.html" aria-label="Nexivo home">{i("nexivo-logo.", "Nexivo", extra='style="height:28px"')}</a>
+<a class="logo" href="{{R}}index.html" aria-label="Nexivo home">{i("nexivo-logo.", "Nexivo", extra='style="height:28px"')}<span class="pwr">Powered by <b>Nexum</b></span></a>
 <nav class="menu" aria-label="Main">{links}</nav>
 <a class="btn btn-line btn-sm" href="{{R}}contact-us.html"><span class="ic">{CHEV}</span>Contact Us</a>
 <button class="burger" aria-label="Menu"><i></i><i></i><i></i></button></div></header>
@@ -74,7 +74,7 @@ def footer(active=""):
 <div class="rv" style="--d:.08s"><h4>Useful Links</h4><ul>{useful}</ul></div>
 <div class="rv" style="--d:.16s"><h4>Quick Links</h4><ul>{quick}</ul></div>
 <div class="rv" style="--d:.24s"><h4>Let’s Connect</h4><ul class="soc">{soc}</ul></div></div>
-<div class="foot-bar rv" style="--d:.3s"><p>© 2026 Nexivo. All rights reserved.</p></div></div></footer>
+<div class="foot-bar rv" style="--d:.3s"><p>© 2026 Nexivo. All rights reserved.</p><p class="powered">Powered by <b>Nexum</b></p></div></div></footer>
 <a class="totop" href="#" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>'''
 
 
