@@ -209,4 +209,11 @@
     window.addEventListener("load", function () { remeasure(); cur = goal; draw(); });
     measure(); goal = G.on ? Math.min(Math.max(window.scrollY / G.D, 0), 1) : 1; cur = goal; draw();
   }
+
+  var tt = document.querySelector(".totop");
+  if (tt) {
+    var ttShow = function () { tt.classList.toggle("show", window.scrollY > 400); };
+    window.addEventListener("scroll", ttShow, { passive: true }); ttShow();
+    tt.addEventListener("click", function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+  }
 })();

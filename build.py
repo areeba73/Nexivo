@@ -70,12 +70,12 @@ def footer(active=""):
     soc = "".join(f'<li><a href="#" aria-label="{n}">{i(p, "").replace("loading=", "width=20 height=20 loading=")}{n}</a></li>' for n, p in SOC.items())
     return f'''<footer class="foot" id="top-footer"><div class="wrap"><div class="foot-top">
 <div class="fb rv"><a class="logo" href="{{R}}index.html">{i("nexivo-logo.", "Nexivo")}</a>
-<p>Nexivo is a complete, customizable learning management solution for schools, colleges, academies, coaching centers and training institutes.</p></div>
+<p>Nexivo is a complete, customizable learning management solution for educational institutions and organizations — schools, colleges, academies, companies and training teams alike.</p></div>
 <div class="rv" style="--d:.08s"><h4>Useful Links</h4><ul>{useful}</ul></div>
 <div class="rv" style="--d:.16s"><h4>Quick Links</h4><ul>{quick}</ul></div>
 <div class="rv" style="--d:.24s"><h4>Let’s Connect</h4><ul class="soc">{soc}</ul></div></div>
-<div class="foot-bar rv" style="--d:.3s"><p>© 2026 Nexivo. All rights reserved.</p>
-<a class="totop" href="#" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a></div></div></footer>'''
+<div class="foot-bar rv" style="--d:.3s"><p>© 2026 Nexivo. All rights reserved.</p></div></div></footer>
+<a class="totop" href="#" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>'''
 
 
 
@@ -105,18 +105,18 @@ def btn(label, href, kind="fill", extra=""):
 
 def cta():
     return f'''<section class="sec" style="padding-bottom:0"><div class="cta"><div class="cta-box rv">
-<h2>Ready to Transform the Way Your Institution Operates?</h2>
-<p>Book a demo to see how Nexivo can help you manage students, batches, courses and results from one centralized platform, and discuss your institution’s requirements with our team.</p>
+<h2>Ready to Transform the Way You Manage Learning?</h2>
+<p>Book a demo to see how Nexivo can help you manage learners, courses, batches and results from one centralized platform, and discuss your organization’s requirements with our team.</p>
 {btn("Book a Demo", "contact-us.html")}
 </div></div></section>'''
 
 
 FAQS = [
-    ("What is Nexivo?", "Nexivo is a learning management system that educational institutions can purchase and use to manage their own courses, students, teachers, batches and enrollments from one centralized platform."),
-    ("Who is Nexivo for?", "Schools, colleges, academies, coaching centers, training institutes and other educational organizations. Each institution uses Nexivo to manage its own educational activities."),
-    ("What can we manage with Nexivo?", "Student management, batch and class management, courses, teachers and staff, online and mock tests, results and performance tracking, attendance, grades and organized academic records, all from one dashboard."),
-    ("Can Nexivo be customized for our institution?", "Nexivo is designed to be flexible. Book a demo and tell us about your requirements, and our team will discuss how the platform can fit the way your institution works."),
-    ("How do we purchase Nexivo?", "Get in touch through the contact page to book a demo. Once we understand your requirements, our team will walk you through the next steps to get your institution started."),
+    ("What is Nexivo?", "Nexivo is a learning management system that educational institutions and organizations can purchase and use to manage their own courses, learners, trainers, batches and enrollments from one centralized platform."),
+    ("Who is Nexivo for?", "Schools, colleges, academies, coaching centers and training institutes, as well as companies, corporate training teams and other organizations. Each one uses Nexivo to manage its own learning and training activities."),
+    ("What can we manage with Nexivo?", "Learner management, batch and class management, courses and training programs, trainers and staff, online and mock tests, results and performance tracking, attendance, grades and organized records, all from one dashboard."),
+    ("Can Nexivo be customized for our organization?", "Nexivo is designed to be flexible. Book a demo and tell us about your requirements, and our team will discuss how the platform can fit the way your institution or organization works, including multiple campuses, branches and departments."),
+    ("How do we purchase Nexivo?", "Get in touch through the contact page to book a demo. Once we understand your requirements, our team will walk you through the next steps to get your institution or organization started."),
     ("Can we see the platform before we decide?", "Yes. Book a demo and we will show you the platform and answer your questions."),
     ("How can we contact the team?", "Use the contact page to send us your questions or request a demo, and our team will get back to you."),
 ]
@@ -129,12 +129,12 @@ def faq(more=True):
     tail = f'''<div class="faq-more rv"><h3>Still Have Questions?</h3><p>Can't find what you need? Contact our team and we'll be happy to help.</p>
 {btn("Contact Us", "contact-us.html")}</div>''' if more else ""
     return f'''<section class="sec grad-bg"><div class="wrap"><div class="sec-head rv"><h2 class="h2">Everything You Need to Know About Nexivo</h2>
-<p>Got questions? Here are the answers institutions ask most, and if you need more, we’re a message away.</p></div>
+<p>Got questions? Here are the answers institutions and organizations ask most, and if you need more, we’re a message away.</p></div>
 <div class="faq">{items}</div>{tail}</div></section>'''
 
 
 # ---------- page shell ----------
-def page(fname, title, body, active="", depth=0, desc="Nexivo – a complete learning management solution for schools, colleges, academies and training institutes."):
+def page(fname, title, body, active="", depth=0, desc="Nexivo – a complete learning management solution for educational institutions and organizations, from schools and colleges to companies and training teams."):
     R = "../" * depth
     doc = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -157,49 +157,49 @@ def page(fname, title, body, active="", depth=0, desc="Nexivo – a complete lea
 def home():
     hero = f'''<section class="hero" style="padding-bottom:56px"><div class="bg-glow"></div>
 <div class="float pf" aria-hidden="true">{i("card-staff", "", extra='width=222 height=203 loading="eager"')}</div><div class="float ts" aria-hidden="true">{i("card-trainees", "", extra='width=222 height=203 loading="eager"')}</div><div class="wrap" style="position:relative">
-<div class="badge rv">{i("Gk7czz", "")}Built for schools, colleges, academies &amp; institutes</div>
+<div class="badge rv">{i("Gk7czz", "")}Built for institutions &amp; organizations of every kind</div>
 <h1 class="h1 rv" style="--d:.08s">Scale Your Impact, <b>Simplify Your Operations</b></h1>
-<p class="lead rv" style="--d:.16s">Nexivo is a complete, customizable learning management solution that brings your students, teachers, courses, batches and results together on one centralized platform.</p>
+<p class="lead rv" style="--d:.16s">Nexivo is a complete, customizable learning management solution that brings your learners, trainers, courses, batches and results together on one centralized platform.</p>
 {btn("Book a Demo", "contact-us.html", "fill", ' style="--d:.24s"').replace('class="btn btn-fill"', 'class="btn btn-fill rv"')}
 <div class="rate rv" style="--d:.3s"><div class="src">{i("YJtCU4", "Trustpilot")}{tp_stars(4.5)}<span>4.5/5</span></div></div>
 <div class="hero-visual rv rv-s" style="--d:.35s;margin-top:76px">
 <div class="dash devframe">{i("nexivo-app-hero", "Nexivo coordinator dashboard", extra='width=1592 height=750 loading="eager"')}</div>
 </div></div></section>'''
 
-    bento = f'''<section class="sec"><div class="wrap"><div class="sec-head rv"><h2 class="h2">One Platform to Run Your Entire Institution</h2>
-<p>Nexivo gives administrators, coordinators and teachers a single place to manage students, batches, courses, assessments and results, with less manual work and more control.</p></div>
+    bento = f'''<section class="sec"><div class="wrap"><div class="sec-head rv"><h2 class="h2">One Platform to Run Your Entire Organization</h2>
+<p>Nexivo gives administrators, coordinators and trainers a single place to manage learners, batches, courses, assessments and results, with less manual work and more control.</p></div>
 <div class="bento">
-<article class="fcard wide span-4 rv" style="display:flex;flex-direction:column;padding-right:24px"><div><h3>Role-Based Dashboards</h3><p>Program admins manage centers and coordinators, while coordinators track registrations, batches and trainees for their own center.</p></div>
+<article class="fcard wide span-4 rv" style="display:flex;flex-direction:column;padding-right:24px"><div><h3>Role-Based Dashboards</h3><p>Admins manage campuses and coordinators, while coordinators track registrations, batches and learners for their own campus or department.</p></div>
 <div class="shot dots wshot">{i("nexivo-mpcs", "Nexivo MPCs management screen", extra='style="border-radius:12px 12px 0 0;box-shadow:0 14px 34px rgba(0,0,0,.12)"')}</div></article>
 <article class="fcard span-2 rv" style="--d:.1s"><h3>Live &amp; Online Classes</h3><p>Schedule, join and review live classes and their recordings for each batch.</p><div class="shot">{i("nexivo-live", "Nexivo live classes screen", extra='style="border-radius:14px"')}</div></article>
 <article class="fcard span-2 rv"><h3>Registration Tracking</h3><p>Follow every registration from review to approved account.</p><div class="shot" style="display:grid;place-items:center;background:#fbf7f4;padding:20px">{i("nexivo-analytics-card", "Nexivo registration funnel", extra='style="width:100%;border-radius:12px;box-shadow:0 14px 34px rgba(0,0,0,.10)"')}</div></article>
 <article class="fcard span-2 rv" style="--d:.1s"><h3>Online &amp; Mock Tests</h3><p>Conduct online and mock tests and review results without the manual effort.</p><div class="shot">{i("oLnsEY", "Test results")}</div></article>
-<article class="fcard span-2 rv" style="--d:.2s"><h3>Enrollments &amp; Registrations</h3><p>Track registrations, verification and admissions for your center.</p><div class="shot" style="padding:0;overflow:hidden">{vp("users", 2)}</div></article>
+<article class="fcard span-2 rv" style="--d:.2s"><h3>Enrollments &amp; Registrations</h3><p>Track registrations, verification and admissions across every campus or branch.</p><div class="shot" style="padding:0;overflow:hidden">{i("nexivo-enrollments.", "Nexivo enrollments and registrations screen", extra='style="width:100%;height:260px;object-fit:cover;object-position:left top;display:block"')}</div></article>
 </div><div class="center-cta rv">{btn("Explore All Features", "features.html", "line")}</div></div></section>'''
 
     steps = f'''<section class="sec grad-bg"><div class="wrap"><div class="sec-head rv"><h2 class="h2">Getting Started with Nexivo</h2></div>
 <div class="steps rv">
-<div class="step"><div class="ico">{IC["user"]}</div><h3>Book a Demo</h3><p>Tell us about your institution and see Nexivo in action.</p></div>
+<div class="step"><div class="ico">{IC["user"]}</div><h3>Book a Demo</h3><p>Tell us about your institution or organization and see Nexivo in action.</p></div>
 <div class="step"><div class="ico">{IC["chat"]}</div><h3>Share Your Requirements</h3><p>Discuss your courses, batches, staff and workflows with our team so the platform fits your needs.</p></div>
-<div class="step"><div class="ico">{IC["cap"]}</div><h3>Launch &amp; Manage</h3><p>Bring your students, teachers and courses onto one centralized platform and manage everything with more control.</p></div></div></div>
-<div class="wrap" style="margin-top:72px"><div class="sec-head rv" style="margin-bottom:30px"><h2 class="h2">Benefits of Nexivo – Why Institutions Choose It</h2>
+<div class="step"><div class="ico">{IC["cap"]}</div><h3>Launch &amp; Manage</h3><p>Bring your learners, trainers and courses onto one centralized platform and manage everything with more control.</p></div></div></div>
+<div class="wrap" style="margin-top:72px"><div class="sec-head rv" style="margin-bottom:30px"><h2 class="h2">Benefits of Nexivo – Why Institutions &amp; Organizations Choose It</h2>
 <p>Less manual work, faster updates and better learning management, all from one centralized platform.</p></div>
 <div class="stack rv">
-<div class="scard"><div class="im">{i("zDhZ8K", "Course management")}</div><h3>Course &amp; Batch Management</h3><p>Manage courses, batches and classes for your institution without juggling spreadsheets.</p></div>
-<div class="scard"><div class="im">{i("nexivo-staff", "Nexivo staff management screen")}</div><h3>Teacher &amp; Staff Management</h3><p>Manage coordinators, trainers and platform roles from one screen.</p></div>
+<div class="scard"><div class="im">{i("zDhZ8K", "Course management")}</div><h3>Course &amp; Batch Management</h3><p>Manage courses, programs, batches and classes without juggling spreadsheets.</p></div>
+<div class="scard"><div class="im">{i("nexivo-staff", "Nexivo staff management screen")}</div><h3>Trainer &amp; Staff Management</h3><p>Manage coordinators, trainers and platform roles from one screen.</p></div>
 <div class="scard"><div class="im">{i("nexivo-attendance", "Nexivo attendance screen")}</div><h3>Organized Attendance Records</h3><p>Review batch session attendance and records without the paperwork.</p></div>
-<div class="scard"><div class="im">{i("nexivo-grades", "Nexivo grades screen")}</div><h3>Grades &amp; Results</h3><p>Review and assign grades and keep results organized for every trainee.</p></div>
+<div class="scard"><div class="im">{i("nexivo-grades", "Nexivo grades screen")}</div><h3>Grades &amp; Results</h3><p>Review and assign grades and keep results organized for every learner.</p></div>
 <div class="scard"><div class="im">{i("mSuIih", "Online class")}</div><h3>Online Learning &amp; Live Classes</h3><p>Deliver classes online so your learners can join and learn from anywhere.</p></div></div>
 <div class="arrows rv"><button class="arr prev" aria-label="Previous">{ARL}</button><button class="arr next" aria-label="Next">{ARR}</button></div></div></section>'''
 
     about = f'''<section class="sec"><div class="wrap"><div class="about">
-<div class="rv rv-l"><h2 class="h2" style="font-size:44px">One Platform for Every Educational Institution</h2>
-<p>Nexivo is built for institutions, not just one school or academy. Whether you run a school, college, academy, coaching center or training institute, you can use Nexivo to manage your own courses, students, teachers and enrollments.</p>
+<div class="rv rv-l"><h2 class="h2" style="font-size:44px">One Platform for Every Institution &amp; Organization</h2>
+<p>Nexivo is built for institutions and organizations alike. Whether you run a school, college or academy, or a company with its own training programs, you can use Nexivo to manage your own courses, learners, trainers and enrollments across every campus, branch or department.</p>
 <div class="pills"><span class="pill"><i></i>Complete &amp; flexible</span><span class="pill"><i></i>Customizable to your needs</span></div>
 {btn("Learn More", "about-us.html", "line")}</div>
 <div class="photo rv rv-r" style="aspect-ratio:auto;border:8px solid #1a1b22;border-radius:26px;box-shadow:0 24px 50px rgba(17,19,24,.14);background:#fff">{i("nexivo-admin", "Nexivo admin operations dashboard", extra='width=1592 height=724 style="height:auto"')}</div></div></div></section>'''
 
-    mods = [("users", "Students"), ("path", "Batches & Classes"), ("book", "Courses"), ("cap", "Teachers & Staff"),
+    mods = [("users", "Learners"), ("path", "Batches & Classes"), ("book", "Courses"), ("cap", "Trainers & Staff"),
             ("note", "Online Tests"), ("target", "Results"), ("clock", "Attendance & Grades"), ("chart", "Reports")]
     xs = [45, 175, 305, 435, 565, 695, 825, 955]
     R_, Y_, B_ = 32, 91, 162
@@ -214,146 +214,156 @@ def home():
         paths += f'<path class="tl" pathLength="1" d="{d}"/>'
     dots = "".join(f'<circle r="3.2" fill="#ff6400"><animateMotion dur="3.6s" begin="-{k * .45:.2f}s" repeatCount="indefinite" path="{re.search(r"d=.([^\"]+)", p).group(1)}"/></circle>' for k, p in enumerate(re.findall(r'<path[^>]*/>', paths)))
     tiles = "".join(f'<div class="tn" style="left:{x - 41.5}px"><div class="tt">{IC[ic]}</div><span>{t}</span></div>' for x, (ic, t) in zip(xs, mods))
-    tree = f'''<section class="sec integ"><div class="wrap"><div class="sec-head rv" style="margin-bottom:10px"><h2 class="h2">One Platform for Every Part of Your Institution</h2>
-<p>Nexivo connects the core areas of running an educational institution (students, batches, courses, teachers, tests, results, attendance and reports) in one centralized platform.</p></div>
+    tree = f'''<section class="sec integ"><div class="wrap"><div class="sec-head rv" style="margin-bottom:10px"><h2 class="h2">One Platform for Every Part of Your Organization</h2>
+<p>Nexivo connects the core areas of running your institution or organization (learners, batches, courses, trainers, tests, results, attendance and reports) in one centralized platform.</p></div>
 <div class="tree rv"><div class="tree-stage"><div class="hub">{i("nexivo-icon", "Nexivo")}</div>
 <svg class="tlines" viewBox="0 0 1000 {B_}" width="1000" height="{B_}" aria-hidden="true">{paths}{dots}</svg>{tiles}</div></div>
 <div class="center-cta rv">{btn("Request a Demo", "contact-us.html")}</div></div></section>'''
 
-    kinds = [("cap", "Schools", "Manage classes, students, teachers and results in one place."),
-             ("book", "Colleges", "Keep courses, teachers and enrollments organized."),
-             ("users", "Academies", "Run batches, tests and performance tracking with ease."),
-             ("target", "Coaching Centers", "Organize batches, mock tests and results for your learners."),
-             ("note", "Training Institutes", "Manage programs, learners and academic records."),
-             ("globe", "Other Educational Organizations", "Adapt Nexivo to the way your organization works.")]
+    kinds = [("cap", "Schools &amp; Colleges", "Manage classes, students, teachers and results in one place."),
+             ("book", "Academies &amp; Institutes", "Keep courses, trainers and enrollments organized."),
+             ("users", "Coaching Centers", "Run batches, tests and performance tracking with ease."),
+             ("bolt", "Companies &amp; Corporate Teams", "Deliver employee training and track learning across departments."),
+             ("globe", "Multi-Campus Groups", "Manage multiple campuses, branches and centers under one system."),
+             ("target", "Any Organization", "Adapt Nexivo to the way your organization works.")]
     kb = "".join(f'<article class="fbox rv" style="--d:{(n%3)*.08}s"><div class="ico">{IC[ic]}</div><h3>{t}</h3><p>{d}</p></article>' for n, (ic, t, d) in enumerate(kinds))
-    who = f'''<section class="sec"><div class="wrap"><div class="sec-head rv"><h2 class="h2">Built for Every Kind of Educational Organization</h2>
-<p>Purchase Nexivo and use it to manage your own educational activities, courses, students, teachers and enrollments.</p></div><div class="frow">{kb}</div></div></section>'''
+    who = f'''<section class="sec"><div class="wrap"><div class="sec-head rv"><h2 class="h2">Built for Every Kind of Institution &amp; Organization</h2>
+<p>Purchase Nexivo and use it to manage your own learning and training activities, courses, learners, trainers and enrollments.</p></div><div class="frow">{kb}</div></div></section>'''
 
     body = hero + bento + steps + about + tree + who + faq() + cta()
-    page("index.html", "Nexivo – Learning Management System for Educational Institutions", body, "index.html", desc="Nexivo is a complete, customizable learning management solution for schools, colleges, academies, coaching centers and training institutes.")
+    page("index.html", "Nexivo – Learning Management System for Institutions &amp; Organizations", body, "index.html", desc="Nexivo is a complete, customizable learning management solution for educational institutions and organizations, from schools and colleges to companies and training teams.")
 
 
 # ---------- FEATURES ----------
 def features():
-    hero = f'''<section class="phero"><div class="wrap"><h1 class="rv">Everything Your Institution Needs, on One Platform</h1>
-<p class="rv" style="--d:.1s">Nexivo brings course management, student enrollment, teacher management, online learning, assessments and reporting together, so your institution can run with more control and less manual work.</p></div></section>'''
+    hero = f'''<section class="phero"><div class="wrap"><h1 class="rv">Everything Your Institution or Organization Needs, on One Platform</h1>
+<p class="rv" style="--d:.1s">Nexivo brings course management, learner enrollment, trainer management, online learning, assessments and reporting together, so your team can run with more control and less manual work.</p></div></section>'''
     rows = f'''<section class="sec" style="padding-top:60px"><div class="wrap"><div class="bento">
-<article class="fcard span-3 rv"><h3>Live &amp; Online Classes</h3><p>Schedule, join and review live classes and their recordings for each batch.</p><div class="shot" style="padding:0;overflow:hidden">{vp("users", 1)}</div></article>
-<article class="fcard span-3 rv" style="--d:.1s;padding:0"><div class="offer" style="min-height:100%;grid-template-columns:1fr;border-radius:30px;height:100%"><div class="t"><span class="tag">Book a Demo</span><h3>Run Your Institution <b>Smarter</b></h3><p>See Nexivo in action and discuss your requirements with our team.</p>{btn("Book a Demo", "contact-us.html", "line", ' style="margin-top:24px"')}</div></div></article>
-<article class="fcard span-6 rv" style="grid-column:span 6"><h3>Batch &amp; Enrollment Overview</h3><p>Monitor active trainees, staff, batches and registrations across your center at a glance.</p><div class="shot" style="padding:0;overflow:hidden">{vp("chart", 3)}</div></article>
+<article class="fcard span-3 rv"><h3>Live &amp; Online Classes</h3><p>Schedule, join and review live classes and their recordings for each batch.</p><div class="shot" style="padding:0;overflow:hidden">{i("nexivo-live.", "Nexivo live and online classes screen", extra='style="width:100%;height:auto;display:block"')}</div></article>
+<article class="fcard span-3 rv" style="--d:.1s;padding:0"><div class="offer" style="min-height:100%;grid-template-columns:1fr;border-radius:30px;height:100%"><div class="t"><span class="tag">Book a Demo</span><h3>Run Your Organization <b>Smarter</b></h3><p>See Nexivo in action and discuss your requirements with our team.</p>{btn("Book a Demo", "contact-us.html", "line", ' style="margin-top:24px"')}</div></div></article>
+<article class="fcard span-6 rv" style="grid-column:span 6"><h3>Batch &amp; Enrollment Overview</h3><p>Monitor active learners, staff, batches and registrations across your campuses at a glance.</p><div class="shot" style="padding:0;overflow:hidden">{i("nexivo-reports", "Nexivo reports and impact review screen", extra='style="width:100%;height:auto;display:block"')}</div></article>
 </div></div></section>'''
     items = [
-        ("users", "Student Management", "Manage student profiles, enrollments and records in one place."),
+        ("users", "Learner Management", "Manage learner and employee profiles, enrollments and records in one place."),
         ("path", "Batch & Class Management", "Organize your batches and classes and keep them running smoothly."),
-        ("book", "Course Management", "Create and manage the courses your institution offers."),
-        ("cap", "Teacher & Staff Management", "Manage teachers and staff alongside your students and courses."),
+        ("book", "Course Management", "Create and manage the courses and training programs your organization offers."),
+        ("cap", "Trainer & Staff Management", "Manage trainers and staff alongside your learners and courses."),
         ("note", "Online & Mock Tests", "Conduct online assessments and mock tests for your learners."),
-        ("target", "Results & Performance Tracking", "Track results and monitor student performance over time."),
+        ("target", "Results & Performance Tracking", "Track results and monitor learner performance over time."),
         ("clock", "Attendance & Grades", "Keep attendance and grades organized and up to date."),
-        ("fire", "Admissions & Enrollments", "Handle registrations and enrollments for your institution."),
+        ("fire", "Admissions & Enrollments", "Handle registrations and enrollments for your institution or organization."),
         ("chart", "Reports & Admin Dashboard", "Get a platform-wide overview of users, batches and admissions activity."),
     ]
     boxes = "".join(f'<article class="fbox rv" style="--d:{(n%3)*.08}s"><div class="ico">{IC[ic]}</div><h3>{t}</h3><p>{d}</p></article>' for n, (ic, t, d) in enumerate(items))
-    future = f'''<section class="sec grad-bg"><div class="wrap"><div class="sec-head rv"><h2 class="h2">Built to Manage Your Institution</h2>
-<p>Everything administrators, coordinators and teachers need to manage daily academic operations from one centralized platform.</p></div><div class="frow">{boxes}</div></div></section>'''
-    nxt = [("Role-Based Dashboards", "Give program admins and coordinators dashboards built around the work they do.", "users"),
-           ("Multi-Center Management", "Oversee your centers and their batches from a single platform.", "globe"),
-           ("Faster Updates, Better Efficiency", "Reduce manual work and keep information current across your institution.", "bolt"),
+    future = f'''<section class="sec grad-bg"><div class="wrap"><div class="sec-head rv"><h2 class="h2">Built to Manage Your Institution or Organization</h2>
+<p>Everything administrators, coordinators and trainers need to manage daily learning and training operations from one centralized platform.</p></div><div class="frow">{boxes}</div></div></section>'''
+    nxt = [("Role-Based Dashboards", "Give admins and coordinators dashboards built around the work they do.", "users"),
+           ("Multi-Campus & Branch Management", "Oversee your campuses, branches and departments from a single platform.", "globe"),
+           ("Faster Updates, Better Efficiency", "Reduce manual work and keep information current across your organization.", "bolt"),
            ("Less Manual Work, More Control", "Replace scattered records with one centralized platform.", "note")]
     nb = "".join(f'<article class="fbox rv" style="--d:{(n%2)*.1}s"><div class="ico" style="flex:none;margin:0">{IC[ic]}</div><div><h3>{t}</h3><p>{d}</p></div></article>' for n, (t, d, ic) in enumerate(nxt))
-    nextgen = f'''<section class="sec"><div class="wrap"><div class="sec-head rv"><h2 class="h2">Institution-Level Management</h2><p>Designed so every institution can manage its own educational activities its own way.</p></div><div class="nextgrid">{nb}</div></div></section>'''
-    page("features.html", "Features - Nexivo", hero + rows + future + nextgen + cta(), "features.html", desc="Explore Nexivo features for student, batch, course and teacher management, online tests and results tracking.")
+    nextgen = f'''<section class="sec"><div class="wrap"><div class="sec-head rv"><h2 class="h2">Organization-Level Management</h2><p>Designed so every institution and organization can manage its own learning and training its own way.</p></div><div class="nextgrid">{nb}</div></div></section>'''
+    page("features.html", "Features - Nexivo", hero + rows + future + nextgen + cta(), "features.html", desc="Explore Nexivo features for learner, batch, course and trainer management, online tests and results tracking.")
 
 
 # ---------- ABOUT ----------
 def about():
     hero = f'''<section class="phero"><div class="wrap">
-<h1 class="rv">Built for the Institutions That Shape Learners</h1>
-<p class="rv" style="--d:.16s">Nexivo is a commercial learning management solution that any school, college, academy, coaching center or training institute can purchase and use to manage its own courses, students, teachers and enrollments.</p>
+<h1 class="rv">Built for the Institutions &amp; Organizations That Shape Learners</h1>
+<p class="rv" style="--d:.16s">Nexivo is a commercial learning management solution that any educational institution or organization can purchase and use to manage its own courses, learners, trainers and enrollments across every campus, branch or department.</p>
 {btn("Book a Demo", "contact-us.html", "fill", ' style="--d:.24s"').replace('class="btn btn-fill"', 'class="btn btn-fill rv"')}</div></section>'''
     story = f'''<section class="sec"><div class="wrap"><div class="story">
-<div class="rv rv-l"><h2>Run Your Institution Smarter with Nexivo</h2><p>Still managing student records, batches, mock tests and results manually? There’s a smarter way. With Nexivo you can manage your academy from one centralized platform.</p>
+<div class="rv rv-l"><h2>Run Your Organization Smarter with Nexivo</h2><p>Still managing learner records, batches, mock tests and results manually? There’s a smarter way. With Nexivo you can manage your institution or organization from one centralized platform.</p>
 {btn("Explore Nexivo Features", "features.html", "line")}</div>
-<div class="duo rv rv-r"><article class="fcard"><h3 style="font-size:22px">Student &amp; Batch Management</h3><p style="font-size:16px">Keep students, batches and classes organized in one place.</p></article>
+<div class="duo rv rv-r"><article class="fcard"><h3 style="font-size:22px">Learner &amp; Batch Management</h3><p style="font-size:16px">Keep learners, batches and classes organized in one place.</p></article>
 <article class="fcard"><h3 style="font-size:22px">Online &amp; Mock Tests</h3><p style="font-size:16px">Assess your learners and keep track of their results.</p></article></div></div></div></section>'''
-    gap = f'''<section class="sec grad-bg"><div class="wrap"><div class="sec-head rv"><h2 class="h2">Bring Your Institution’s Learning Online</h2>
+    gap = f'''<section class="sec grad-bg"><div class="wrap"><div class="sec-head rv"><h2 class="h2">Bring Your Learning &amp; Training Online</h2>
 {btn("Book a Demo", "contact-us.html", "fill", ' style="margin-top:26px"')}</div>
-<div class="duo"><div class="photo rv" style="aspect-ratio:1/1">{vp("users", 1)}</div><div class="photo rv" style="--d:.1s;aspect-ratio:1/1">{vp("chart", 3)}</div></div></div></section>'''
-    comm = f'''<section class="sec"><div class="wrap"><div class="about"><div class="rv rv-l"><h2 class="h2" style="font-size:44px">Customized for Your Institution</h2>
-<p>Every institution works differently. Tell us how yours does, and we’ll discuss how Nexivo can fit your requirements.</p>
+<div class="duo"><div class="photo rv" style="aspect-ratio:1/1">{i("nexivo-about-1", "Nexivo live classes")}</div><div class="photo rv" style="--d:.1s;aspect-ratio:1/1">{i("nexivo-about-2", "Nexivo dashboard overview", extra='style="object-position:left top"')}</div></div></div></section>'''
+    comm = f'''<section class="sec"><div class="wrap"><div class="about"><div class="rv rv-l"><h2 class="h2" style="font-size:44px">Customized for Your Organization</h2>
+<p>Every institution and organization works differently. Tell us how yours does, and we’ll discuss how Nexivo can fit your requirements.</p>
 <div style="margin-top:28px">{btn("Discuss Your Requirements", "contact-us.html", "line")}</div></div>
-<div class="photo rv rv-r">{vp("globe", 2)}</div></div></div></section>'''
+<div class="photo rv rv-r">{i("nexivo-about-3", "Nexivo admin operations", extra='style="object-position:left top"')}</div></div></div></section>'''
     xp = f'''<section class="sec" style="padding-top:0"><div class="wrap"><div class="xp">
-<article class="card rv" style="background:var(--peach)"><h3>One Centralized Platform</h3><p>Students, teachers, courses, batches, attendance, grades and results, managed together instead of scattered across different tools.</p></article>
-<article class="card rv" style="--d:.1s;background:#f6f4ff"><h3>Flexible &amp; Customizable</h3><p>Designed for schools, colleges, academies, coaching centers and training institutes, and adaptable to the way each one operates.</p></article></div></div></section>'''
-    page("about-us.html", "About Us - Nexivo", hero + story + gap + comm + xp + cta(), "about-us.html", desc="Nexivo is a learning management solution that educational institutions can purchase and use for their own needs.")
+<article class="card rv" style="background:var(--peach)"><h3>One Centralized Platform</h3><p>Learners, trainers, courses, batches, attendance, grades and results, managed together instead of scattered across different tools.</p></article>
+<article class="card rv" style="--d:.1s;background:#f6f4ff"><h3>Flexible &amp; Customizable</h3><p>Designed for educational institutions and organizations alike, and adaptable to the way each one operates across its campuses, branches and departments.</p></article></div></div></section>'''
+    page("about-us.html", "About Us - Nexivo", hero + story + gap + comm + xp + cta(), "about-us.html", desc="Nexivo is a learning management solution that educational institutions and organizations can purchase and use for their own needs.")
 
 
 # ---------- PRICING ----------
 def pricing():
-    hero = f'''<section class="phero" style="padding-bottom:50px"><div class="wrap"><h1 class="rv">Pricing Tailored to Your Institution</h1><p class="rv" style="--d:.1s">Nexivo is licensed to educational institutions. Tell us about your institution and your requirements, and we’ll put together a plan that fits.</p></div></section>'''
-    cards = [("Book a Demo", "See Nexivo in action and ask us anything.", False, "Book a Demo", ["A walkthrough of the platform", "Answers to your questions", "A discussion of your use case"]),
-             ("Share Your Requirements", "Tell us about your institution, learners and workflows.", True, "Discuss Requirements", ["Courses, batches and students", "Teachers and staff", "Assessment and reporting needs"]),
-             ("Get Your Tailored Quote", "We’ll propose how Nexivo fits your institution and what it costs.", False, "Request a Quote", ["Based on your requirements", "Clear next steps to get started", "Direct conversation with our team"])]
+    hero = f'''<section class="phero" style="padding-bottom:50px"><div class="wrap"><h1 class="rv">Simple, Flexible Pricing</h1><p class="rv" style="--d:.1s">Plans for educational institutions and organizations of every size, from a single campus to multi-campus groups and large enterprises. Pick the plan that fits how you operate, and scale as you grow.</p></div></section>'''
+    # (nm, price, period, description, hot, cta label, cta kind, lead-in line, [features])
+    cards = [
+        ("Single Campus", "$49", "/mo", "For a single institution running at one location.", False, "Get Started", "line", "Core LMS included:",
+         ["One campus or location", "Up to 500 learners", "Course &amp; batch management", "Trainer &amp; staff management", "Online &amp; mock tests", "Attendance, grades &amp; results", "Reports &amp; admin dashboard", "Email support"]),
+        ("Multi-Campus", "$149", "/mo", "For organizations running multiple campuses, branches and departments.", True, "Book a Demo", "fill", "Everything in Single Campus, plus:",
+         ["Multiple campuses &amp; branches", "Department-level management", "Up to 5,000 learners", "Role-based dashboards per campus", "Consolidated reports across campuses", "Bulk enrollments &amp; admissions", "Priority support"]),
+        ("Enterprise", "Custom", "", "For large institutions and organizations with custom requirements.", False, "Contact Sales", "line", "Everything in Multi-Campus, plus:",
+         ["Unlimited campuses &amp; learners", "Custom roles &amp; permissions", "Custom integrations &amp; branding", "Dedicated account manager", "Onboarding &amp; training", "SLA-backed support"]),
+    ]
     cb = ""
-    for n, (nm, ds, hot, bt, feats) in enumerate(cards):
-        lis = "".join(f"<li>{CHECK}{f}</li>" for f in feats)
-        cb += f'''<article class="plan{" hot" if hot else ""} rv" style="--d:{n*.1}s"><div class="nm">{nm}</div><p class="ds" style="margin-top:14px">{ds}</p>
-{btn(bt, "contact-us.html", "fill" if hot else "line")}<ul>{lis}</ul></article>'''
-    plans = f'<section class="sec" style="padding-top:40px"><div class="wrap"><div class="sec-head rv"><h2 class="h2">How Purchasing Nexivo Works</h2></div><div class="plans">{cb}</div></div></section>'
-    caps = ["Student management", "Batch & class management", "Course management", "Teacher & staff management", "Online & mock tests", "Results & performance tracking", "Attendance & grades", "Organized academic records", "Admissions & enrollments", "Reports & admin dashboard"]
+    for n, (nm, price, period, ds, hot, bt, kind, lead, feats) in enumerate(cards):
+        pr = f'{price}<small>{period} *</small>' if period else price
+        lis = f'<li class="hd">{lead}</li>' + "".join(f"<li>{CHECK}{f}</li>" for f in feats)
+        tag = '<span class="tag" style="display:inline-block;margin-bottom:12px">Most popular</span>' if hot else ""
+        cb += f'''<article class="plan{" hot" if hot else ""} rv" style="--d:{n*.1}s">{tag}<div class="nm">{nm}</div><div class="pr">{pr}</div><p class="ds">{ds}</p>
+{btn(bt, "contact-us.html", kind)}<ul>{lis}</ul></article>'''
+    plans = f'''<section class="sec" style="padding-top:40px"><div class="wrap"><div class="sec-head rv"><h2 class="h2">Plans for Every Size of Institution &amp; Organization</h2>
+<p>Every plan is licensed to your institution or organization and billed per month. Add campuses, branches and departments as you grow.</p></div><div class="plans">{cb}</div>
+<p class="rv" style="text-align:center;margin-top:28px;font-size:15px;color:var(--gray)">* Example figures shown for layout. <a href="{{R}}contact-us.html" style="color:var(--orange)">Contact us</a> for a tailored quote based on your campuses, learners and requirements.</p></div></section>'''
+    caps = ["Learner management", "Batch & class management", "Course & program management", "Trainer & staff management", "Online & mock tests", "Results & performance tracking", "Attendance & grades", "Organized records", "Admissions & enrollments", "Reports & admin dashboard"]
     cl = "".join(f"<li>{CHECK}{c}</li>" for c in caps)
-    cmp_ = f'''<section class="sec grad-bg"><div class="wrap"><div class="sec-head rv"><h2 class="h2">Core Capabilities of Nexivo</h2>
-<p>Whatever your institution’s size or type, these are the tools you’ll use to manage your educational activities.</p></div>
+    cmp_ = f'''<section class="sec grad-bg"><div class="wrap"><div class="sec-head rv"><h2 class="h2">Included in Every Plan</h2>
+<p>Whatever plan you choose, these are the core tools you’ll use to manage your learning and training activities.</p></div>
 <div class="plan rv" style="max-width:860px;margin:0 auto"><ul class="capgrid" style="border-top:0;padding-top:0;grid-template-columns:repeat(2,1fr)">{cl}</ul></div></div></section>'''
-    page("pricing.html", "Pricing - Nexivo", hero + plans + cmp_ + faq(False) + cta(), "pricing.html", desc="Nexivo is licensed to educational institutions. Contact us for a tailored quote.")
+    page("pricing.html", "Pricing - Nexivo", hero + plans + cmp_ + faq(False) + cta(), "pricing.html", desc="Nexivo pricing plans for educational institutions and organizations — single campus, multi-campus and enterprise, with multi-branch and department support.")
 
 
 # ---------- BLOG ----------
 POSTS = [
-    ("Institution Management", "Why Centralized Academic Records Matter", "How keeping student, batch and result data in one platform reduces manual work for administrators.", "note:1"),
-    ("Institution Management", "Managing Batches and Classes Without the Spreadsheets", "A practical look at organizing batches, classes and schedules across your institution.", "path:2"),
-    ("Institution Management", "Choosing a Learning Management System for Your Institution", "Key questions schools, colleges and academies should ask before they buy.", "target:3"),
-    ("Online Learning & Assessments", "Running Live Classes for Your Batches", "How to schedule, join and review live classes and their recordings for each batch.", "users:4"),
-    ("Online Learning & Assessments", "Tracking Student Performance Over Time", "Why consistent results tracking helps teachers and administrators act earlier.", "chart:1"),
-    ("Nexivo Features & Updates", "What’s New in Nexivo", "Product updates and announcements from the Nexivo team.", "bell:2"),
+    ("Institutions & Organizations", "Why Centralized Records Matter", "How keeping learner, batch and result data in one platform reduces manual work for administrators.", "img:nexivo-enrollments-blog."),
+    ("Institutions & Organizations", "Managing Batches and Classes Without the Spreadsheets", "A practical look at organizing batches, classes and schedules across your campuses and departments.", "img:nexivo-batches."),
+    ("Institutions & Organizations", "Choosing a Learning Management System", "Key questions institutions and organizations should ask before they buy.", "img:nexivo-courses."),
+    ("Online Learning & Assessments", "Running Live Classes for Your Batches", "How to schedule, join and review live classes and their recordings for each batch.", "img:nexivo-blog-4."),
+    ("Online Learning & Assessments", "Tracking Learner Performance Over Time", "Why consistent results tracking helps trainers and administrators act earlier.", "img:nexivo-analytics."),
+    ("Nexivo Features & Updates", "What’s New in Nexivo", "Product updates and announcements from the Nexivo team.", "img:nexivo-support."),
 ]
 
 
 def post(p, hidden=False):
     cat, t, x, im = p
     ic, hue = im.split(":")
-    return f'<a class="post rv{" hidden" if hidden else ""}" data-cat="{cat}" href="{{R}}blog.html" style="{"display:none" if hidden else ""}"><div class="im">{vp(ic, int(hue))}</div><div class="tx"><div class="meta"><span>{cat}</span></div><h3>{t}</h3><p>{x}</p></div></a>'
+    return f'<a class="post rv{" hidden" if hidden else ""}" data-cat="{cat}" href="{{R}}blog.html" style="{"display:none" if hidden else ""}"><div class="im">{i(hue, t, extra='style="width:100%;height:100%;object-fit:cover;object-position:left top"') if ic == "img" else vp(ic, int(hue))}</div><div class="tx"><div class="meta"><span>{cat}</span></div><h3>{t}</h3><p>{x}</p></div></a>'
 
 
 def blog():
-    hero = f'''<section class="phero" style="padding-bottom:50px"><div class="wrap"><h1 class="rv">Insights for Educational Institutions</h1>
-<p class="rv" style="--d:.1s">Practical ideas on managing students, batches, tests and results, and on getting more from your learning management system.</p>
+    hero = f'''<section class="phero" style="padding-bottom:50px"><div class="wrap"><h1 class="rv">Insights for Institutions &amp; Organizations</h1>
+<p class="rv" style="--d:.1s">Practical ideas on managing learners, batches, tests and results, and on getting more from your learning management system.</p>
 <div class="search rv" style="--d:.2s"><input type="text" placeholder="Ex. Managing batches" aria-label="Search articles"><span>{'<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>'}</span></div></div></section>'''
-    cats = ["All Categories", "Institution Management", "Online Learning & Assessments", "Nexivo Features & Updates"]
+    cats = ["All Categories", "Institutions & Organizations", "Online Learning & Assessments", "Nexivo Features & Updates"]
     chips = "".join(f'<button class="chip{" on" if n == 0 else ""}" data-cat="{"all" if n == 0 else c}">{c}</button>' for n, c in enumerate(cats))
     grid = f'''<section class="sec" style="padding-top:40px"><div class="wrap"><div class="sec-head rv" style="margin-bottom:30px"><h2 class="h2" style="font-size:40px">Latest Articles</h2></div>
 <div class="chips rv">{chips}</div><div class="bgrid">{"".join(post(p, n >= 4) for n, p in enumerate(POSTS))}</div>
 <div class="center-cta rv"><a id="loadmore" class="btn btn-line" href="#"><span class="ic">{CHEV}</span>Load More Articles</a></div></div></section>'''
-    page("blog.html", "Blog - Nexivo", hero + grid + cta(), "blog.html", desc="Articles for educational institutions from the Nexivo team.")
+    page("blog.html", "Blog - Nexivo", hero + grid + cta(), "blog.html", desc="Articles for educational institutions and organizations from the Nexivo team.")
 
 
 # ---------- CONTACT ----------
 def contact():
-    hero = f'''<section class="phero" style="padding-bottom:50px"><div class="wrap"><h1 class="rv">Let’s Talk About Your Institution</h1>
-<p class="rv" style="--d:.1s">Book a demo, share your requirements or ask us anything about Nexivo. Tell us about your institution and our team will get back to you.</p></div></section>'''
+    hero = f'''<section class="phero" style="padding-bottom:50px"><div class="wrap"><h1 class="rv">Let’s Talk About Your Organization</h1>
+<p class="rv" style="--d:.1s">Book a demo, share your requirements or ask us anything about Nexivo. Tell us about your institution or organization and our team will get back to you.</p></div></section>'''
     opts = "".join(f"<option>{o}</option>" for o in ["Book a Demo", "Discuss My Requirements", "Request a Quote", "Ask a Question"])
     form = f'''<section class="sec" style="padding-top:40px"><div class="wrap"><div class="contact">
-<div class="cinfo rv rv-l"><h2>Book a Demo</h2><p>See how Nexivo can help your institution run smarter. Fill in the form and tell us what you need.</p>
+<div class="cinfo rv rv-l"><h2>Book a Demo</h2><p>See how Nexivo can help your organization run smarter. Fill in the form and tell us what you need.</p>
 <div class="cline"><span class="ico">{IC["chat"]}</span><div><small>Discuss</small><b>Your requirements</b></div></div>
 <div class="cline"><span class="ico">{IC["cap"]}</span><div><small>See</small><b>The platform in action</b></div></div></div>
 <form class="form rv rv-r" id="contactForm" novalidate>
 <label>Full Name*<input type="text" name="name" placeholder="Enter your full name" required><span class="err">Please enter your name.</span></label>
 <label>Email Address*<input type="email" name="email" placeholder="Enter your email" required><span class="err">Please enter a valid email.</span></label>
-<label>Institution Name<input type="text" name="institution" placeholder="Enter your institution’s name"></label>
+<label>Institution / Organization Name<input type="text" name="institution" placeholder="Enter your institution or organization name"></label>
 <label>How can we help?<select name="service"><option value="">Select an option</option>{opts}</select></label>
-<label>Leave a Message<textarea name="message" placeholder="Tell us about your institution and requirements"></textarea></label>
+<label>Leave a Message<textarea name="message" placeholder="Tell us about your organization and requirements"></textarea></label>
 <label class="ck"><input type="checkbox" required> I agree to the&nbsp;<a href="{{R}}privacy-policy.html">privacy policy</a><span class="err" style="margin-left:8px">Required.</span></label>
 <button class="btn btn-fill" type="submit" style="justify-self:start"><span class="ic">{CHEV}</span>Send Request</button></form></div></div></section>'''
     page("contact-us.html", "Contact Us - Nexivo", hero + form + faq(False) + cta(), "contact-us.html", desc="Book a demo or discuss your requirements with the Nexivo team.")
